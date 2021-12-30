@@ -5,7 +5,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "default" {
   enable_auto_scaling   = true
   max_count             = var.max_count
   min_count             = var.min_count
-  max_pods              = 200
+  max_pods              = 250
 
   tags = var.tags
 }
