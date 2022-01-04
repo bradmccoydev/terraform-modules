@@ -15,7 +15,7 @@ resource "azurerm_kubernetes_cluster" "default" {
     enable_auto_scaling = true
     min_count           = 1
     max_count           = 10
-    #max_pods            = 200
+    max_pods            = 200
   }
 
   identity {
