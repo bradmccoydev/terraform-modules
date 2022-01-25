@@ -6,6 +6,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "default" {
   max_count             = var.max_count
   min_count             = var.min_count
   max_pods              = 250
+  vnet_subnet_id        = var.kubernetes_subnet_id
 
   tags = var.tags
 }

@@ -23,3 +23,8 @@ variable "min_count" {
 variable "tags" {
   type = map(string)
 }
+
+variable "kubernetes_subnet_id" {
+  type        = string
+  description = "Kubernetes Subnet Id"
+}
