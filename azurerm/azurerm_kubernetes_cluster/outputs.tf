@@ -2,6 +2,11 @@ output "id" {
   value = azurerm_kubernetes_cluster.default.id
 }
 
+output "name" {
+  value      = var.name
+  depends_on = [azurerm_kubernetes_cluster.default]
+}
+
 output "principal_id" {
   value = azurerm_kubernetes_cluster.default.identity[0].principal_id
 }
