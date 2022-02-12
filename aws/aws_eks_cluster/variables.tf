@@ -1,10 +1,10 @@
 variable "cluster_name" {
-    default = "example"
+    default = "default"
     type = string
 }
 
 variable "node_group_name" {
-    default = "example-node"
+    default = "default-node"
     type = string
 }
 
