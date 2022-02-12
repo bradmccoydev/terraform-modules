@@ -3,6 +3,10 @@ variable "cluster_name" {
     type = string
 }
 
+variable "arn" {
+    type = string
+}
+
 variable "node_group_name" {
     default = "default-node"
     type = string

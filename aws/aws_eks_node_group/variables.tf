@@ -1,16 +1,23 @@
-variable "name" {
-  type        = string
-  description = "Security Group Name"
+variable "cluster_name" {
+    default = "default"
+    type = string
 }
 
-variable "description" {
-  type        = string
-  description = "Security Group Description"
+variable "node_group_name" {
+    default = "example"
+    type = string
 }
 
-variable "vpc_id" {
-  type        = string
-  description = "VPC ID"
+variable "arn" {}
+
+variable "subnet_id" {}
+
+variable "disk_size" {
+    type = number
+}
+
+variable "kubernetes_node_size" {
+    type = number
 }
 
 variable "tags" {
