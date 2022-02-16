@@ -11,7 +11,7 @@ resource "google_container_cluster" "primary" {
 
   network_policy {
     provider = upper(var.network_policy)
-    enabled = true
+    enabled  = true
   }
 
   ip_allocation_policy {}

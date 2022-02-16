@@ -5,5 +5,5 @@ variable "length" {
 
 variable "special" {
   description = "Special Characters."
-  default = true
+  default     = true
 }

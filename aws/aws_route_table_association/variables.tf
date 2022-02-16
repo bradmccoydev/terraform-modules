@@ -9,6 +9,6 @@ variable "route_table_id" {
 }
 
 variable "tags" {
-  type = map(string)
+  type        = map(string)
   description = "AWS Tags"
 }

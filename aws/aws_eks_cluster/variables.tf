@@ -1,21 +1,21 @@
 variable "cluster_name" {
-    default = "default"
-    type = string
+  default = "default"
+  type    = string
 }
 
 variable "arn" {
-    type = string
+  type = string
 }
 
 variable "node_group_name" {
-    default = "default-node"
-    type = string
+  default = "default-node"
+  type    = string
 }
 
 variable "subnet_example1_id" {
-    type = string
+  type = string
 }
 
 variable "subnet_example2_id" {
-    type = string
+  type = string
 }

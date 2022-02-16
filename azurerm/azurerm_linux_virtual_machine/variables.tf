@@ -24,7 +24,7 @@ variable "bastion_username" {
 
 variable "public_key" {
   description = "Public Key"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "disable_password_authentication" {

@@ -15,7 +15,7 @@ resource "azurerm_consumption_budget_resource_group" "default" {
     start_date = formatdate("YYYY-MM-01'T'00:00:00Z", timestamp())
   }
 
-    notification {
+  notification {
     enabled   = true
     threshold = 50.0
     operator  = "EqualTo"

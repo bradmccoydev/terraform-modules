@@ -32,6 +32,6 @@ variable "network_policy" {
   description = "Kubernetes Network Policy."
 }
 
-variable tags {
+variable "tags" {
   description = "Tags to be applied to the deployed resources"
 }

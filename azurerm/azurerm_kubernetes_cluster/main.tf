@@ -30,7 +30,7 @@ resource "azurerm_kubernetes_cluster" "default" {
     network_plugin = var.kubernetes_network_plugin // [azure,kubenet]
     network_policy = var.kubernetes_network_policy
   }
- 
+
   addon_profile {
     http_application_routing {
       enabled = var.enable_http_application_routing

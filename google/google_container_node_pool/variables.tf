@@ -13,7 +13,7 @@ variable "cloud_transient_instance" {
 }
 
 variable "cluster_name" {
-  type     = string
+  type        = string
   description = "gke username"
 }
 

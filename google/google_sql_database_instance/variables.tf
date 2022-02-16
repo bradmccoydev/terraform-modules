@@ -1,5 +1,5 @@
 variable "db_depends_on" {
-  description = "Variable to force module to wait for the Service Networking"  
+  description = "Variable to force module to wait for the Service Networking"
 }
 
 variable "project_id" {

@@ -15,6 +15,6 @@ variable "mail_nickname" {
 
 variable "password" {
   type        = string
-  sensitive = true
+  sensitive   = true
   description = "Password."
 }

@@ -8,13 +8,13 @@ variable "location" {
 
 variable "budget_amount" {
   description = "azure rg location"
-  default = 0
+  default     = 0
 }
 
 variable "contact_emails" {
   description = "Team contact email"
-  type = list(string)
-  default = [ "brad@odysseycloud.io", "amit@odysseycloud.io" ]
+  type        = list(string)
+  default     = ["brad@odysseycloud.io", "amit@odysseycloud.io"]
 }
 
 variable "tags" {

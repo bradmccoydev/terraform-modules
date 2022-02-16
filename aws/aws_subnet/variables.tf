@@ -14,6 +14,6 @@ variable "availability_zone" {
 }
 
 variable "tags" {
-  type = map(string)
+  type        = map(string)
   description = "AWS Tags"
 }

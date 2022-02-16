@@ -11,8 +11,8 @@ resource "azurerm_linux_virtual_machine" "default" {
   ]
 
   admin_ssh_key {
-    username       = var.bastion_username
-    public_key     = var.public_key
+    username   = var.bastion_username
+    public_key = var.public_key
   }
 
   os_disk {

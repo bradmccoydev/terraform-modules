@@ -4,10 +4,10 @@ variable "zone_id" {
 
 variable "certificate" {
   description = "The Certificate."
-  sensitive = true
+  sensitive   = true
 }
 
 variable "private_key" {
   description = "The Private Key."
-  sensitive = true
+  sensitive   = true
 }

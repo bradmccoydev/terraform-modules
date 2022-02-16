@@ -23,8 +23,8 @@ resource "google_storage_bucket" "bucket" {
       age = var.disable_gcs_delete == "true" ? "100000" : "90"
     }
     action {
-      type = var.disable_gcs_delete == "true" ? "SetStorageClass" : "Delete"
-      storage_class = var.disable_gcs_delete == "true" ? "ARCHIVE": ""
+      type          = var.disable_gcs_delete == "true" ? "SetStorageClass" : "Delete"
+      storage_class = var.disable_gcs_delete == "true" ? "ARCHIVE" : ""
     }
   }
   lifecycle_rule {
@@ -32,8 +32,8 @@ resource "google_storage_bucket" "bucket" {
       age = var.disable_gcs_delete == "true" ? "100000" : "90"
     }
     action {
-      type = var.disable_gcs_delete == "true" ? "SetStorageClass" : "Delete"
-      storage_class = var.disable_gcs_delete == "true" ? "ARCHIVE": ""
+      type          = var.disable_gcs_delete == "true" ? "SetStorageClass" : "Delete"
+      storage_class = var.disable_gcs_delete == "true" ? "ARCHIVE" : ""
     }
   }
   # as terraform has no count  = 0/1 for this, have to set up an infinite day for disable
