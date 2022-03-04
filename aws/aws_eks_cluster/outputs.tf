@@ -1,3 +1,3 @@
 output "endpoint" {
-    value = aws_eks_cluster.default.endpoint
+  value = aws_eks_cluster.default.endpoint
 }
