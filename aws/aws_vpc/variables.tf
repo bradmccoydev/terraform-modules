@@ -1,9 +1,9 @@
 variable "cidr_block" {
   type        = string
-  description = "VPC ID"
+  description = "The IPv4 CIDR block for VPC"
 }
 
 variable "tags" {
-  type = map(string)
-  description = "AWS Tags"
+  type        = map(string)
+  description = "Tags"
 }
