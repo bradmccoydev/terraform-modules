@@ -3,7 +3,7 @@ variable "aws_cluster_name" {
   description = "Name of the EKS Cluster"
 
   validation {
-    condition     = 0 < length(var.cluster_name) < 101 && can(regex("^[0-9A-Za-z][A-Za-z0-9-_]+$", var.cluster_name))
+    condition     = 100 >= length(var.aws_cluster_name) && length(var.aws_cluster_name) > 0 && can(regex("^[0-9A-Za-z][A-Za-z0-9-_]+$", var.aws_cluster_name))
     error_message = "'cluster_name' should be between 1 and 100 characters, start with alphanumeric character and contain alphanumeric characters, dashes and underscores."
   }
 }

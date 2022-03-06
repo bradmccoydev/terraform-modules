@@ -3,7 +3,7 @@ variable "cluster_name" {
   description = "Name of the EKS Cluster"
 
   validation {
-    condition     = 0 < length(var.cluster_name) < 101 && can(regex("^[0-9A-Za-z][A-Za-z0-9-_]+$", var.cluster_name))
+    condition     = 100 >= length(var.cluster_name) && length(var.cluster_name) > 0 && can(regex("^[0-9A-Za-z][A-Za-z0-9-_]+$", var.cluster_name))
     error_message = "'cluster_name' should be between 1 and 100 characters, start with alphanumeric character and contain alphanumeric characters, dashes and underscores."
   }
 }
@@ -19,7 +19,7 @@ variable "arn" {
 
   validation {
     condition     = length(var.arn) > 0
-    error_message = "'arn' should nto be empty"
+    error_message = "'arn' should nto be empty."
   }
 }
 
@@ -29,7 +29,7 @@ variable "subnet_id" {
 }
 
 variable "scaling_config" {
-  type        = { desired_size : number, max_size : number, min_size : number }
+  type        = object({ desired_size : number, max_size : number, min_size : number })
   description = "Configuration block with scaling settings."
 
   default = {
