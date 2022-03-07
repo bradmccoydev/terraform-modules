@@ -8,7 +8,7 @@ variable "cluster_name" {
   }
 }
 
-variable "arn" {
+variable "cluster_role_arn" {
   type        = string
   description = "Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group."
 }
