@@ -1,8 +1,8 @@
 resource "aws_eks_node_group" "default" {
   cluster_name    = var.cluster_name
   node_group_name = var.node_group_name
-  node_role_arn   = var.arn
-  subnet_ids      = var.subnet_id
+  node_role_arn   = var.node_role_arn
+  subnet_ids      = var.subnet_ids
   disk_size       = var.disk_size
   instance_types  = var.kubernetes_node_size
 
