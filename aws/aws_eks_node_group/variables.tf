@@ -18,7 +18,7 @@ variable "node_role_arn" {
   description = "Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group."
 
   validation {
-    condition     = length(var.arn) > 0
+    condition     = length(var.node_role_arn) > 0
     error_message = "'node_role_arn' should nto be empty."
   }
 }
