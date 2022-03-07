@@ -10,7 +10,6 @@ variable "assume_policy_role_object" {
       object({
         Action = string
         Effect = string
-        Sid    = string
         Principal = object({
           Service = string
         })

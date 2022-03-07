@@ -13,17 +13,17 @@ variable "node_group_name" {
   type    = string
 }
 
-variable "arn" {
+variable "node_role_arn" {
   type        = string
   description = "Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group."
 
   validation {
-    condition     = length(var.arn) > 0
-    error_message = "'arn' should nto be empty."
+    condition     = length(var.node_role_arn) > 0
+    error_message = "'node_role_arn' should nto be empty."
   }
 }
 
-variable "subnet_id" {
+variable "subnet_ids" {
   type        = list(string)
   description = "Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: kubernetes.io/cluster/CLUSTER_NAME (where CLUSTER_NAME is replaced with the name of the EKS Cluster)."
 }
