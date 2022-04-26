@@ -22,19 +22,9 @@ resource "azurerm_kubernetes_cluster" "default" {
     type = "SystemAssigned"
   }
 
-  role_based_access_control {
-    enabled = true
-  }
-
   network_profile {
     network_plugin = var.kubernetes_network_plugin // [azure,kubenet]
     network_policy = var.kubernetes_network_policy
-  }
- 
-  addon_profile {
-    http_application_routing {
-      enabled = var.enable_http_application_routing
-    }
   }
 
   tags = var.tags
