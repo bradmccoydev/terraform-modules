@@ -15,7 +15,7 @@ variable "resource_group_name" {
 
 variable "address_space" {
   type        = string
-  description = "Project Name."
+  description = "Address Space."
 }
 
 variable "tags" {

@@ -7,7 +7,7 @@ variable "location" {
 }
 
 variable "budget_amount" {
-  description = "azure rg location"
+  description = "budget amount"
   default = 0
 }
 

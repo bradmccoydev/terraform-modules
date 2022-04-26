@@ -1,5 +1,5 @@
 output "id" {
-  description = "Resource group Id"
+  description = "Virtual Network Peering Id"
   value       = azurerm_virtual_network_peering.default.id
 }
 
