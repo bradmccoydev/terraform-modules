@@ -1,6 +1,6 @@
-variable "cidr_block" {
+variable "name" {
   type        = string
-  description = "The IPv4 CIDR block for VPC"
+  description = "S3 Bucket name"
 }
 
 variable "tags" {

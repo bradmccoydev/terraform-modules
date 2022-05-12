@@ -1,4 +1,4 @@
 output "id" {
-  value       = aws_vpc.default.id
-  description = "VPC ID"
+  value       = aws_s3_bucket.default.id
+  description = "S3 ID"
 }
