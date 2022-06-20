@@ -51,7 +51,7 @@ variable "allow_per_site_scaling" {
 
 variable "allow_zone_balancing" {
   type        = bool
-  description = "Allows balancing the service plan across availability zones in region."
+  description = "Allows balancing the service plan across availability zones in region"
   default     = false
 }
 
