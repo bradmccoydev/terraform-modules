@@ -14,7 +14,7 @@ variable "resource_group_name" {
 
 variable "subnet_id" {
   type        = string
-  description = "The name of the subnet id."
+  description = "The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint."
 }
 
 variable "private_service_connection_name" {
@@ -24,8 +24,15 @@ variable "private_service_connection_name" {
 
 variable "private_connection_resource_id" {
   type        = string
-  description = "The id of the private connection resource."
+  description = "The ID of the Private Link Enabled Remote Resource which this Private Endpoint should be connected to."
 }
+
+variable "is_manual_connection" {
+  type        = bool
+  description = "Does the Private Endpoint require Manual Approval from the remote resource owner?"
+  default     = false
+}
+
 
 variable "tags" {
   type = map(string)
