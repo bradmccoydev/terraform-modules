@@ -3,23 +3,21 @@ resource "azurerm_private_link_service" "default" {
   resource_group_name = var.resource_group_name
   location            = var.location
 
-  auto_approval_subscription_ids              = ["00000000-0000-0000-0000-000000000000"]
-  visibility_subscription_ids                 = ["00000000-0000-0000-0000-000000000000"]
-  load_balancer_frontend_ip_configuration_ids = [azurerm_lb.example.frontend_ip_configuration.0.id]
+  auto_approval_subscription_ids              = var.auto_approval_subscription_ids
+  visibility_subscription_ids                 = var.visibility_subscription_ids
+  load_balancer_frontend_ip_configuration_ids = var.load_balancer_frontend_ip_configuration_ids
 
-  nat_ip_configuration {
-    name                       = "primary"
-    private_ip_address         = "10.5.1.17"
-    private_ip_address_version = "IPv4"
-    subnet_id                  = azurerm_subnet.example.id
-    primary                    = true
+
+  dynamic "nat_ip_configuration" {
+    for_each = var.nat_ip_settings
+    content {
+      name                       = nat_ip_configuration.name
+      private_ip_address         = nat_ip_configuration.private_ip
+      private_ip_address_version = "IPv4"
+      subnet_id                  = nat_ip_configuration.subnet_id
+      primary                    = nat_ip_configuration.is_primary
+    }
   }
 
-  nat_ip_configuration {
-    name                       = "secondary"
-    private_ip_address         = "10.5.1.18"
-    private_ip_address_version = "IPv4"
-    subnet_id                  = azurerm_subnet.example.id
-    primary                    = false
-  }
+  tags = var.tags
 }

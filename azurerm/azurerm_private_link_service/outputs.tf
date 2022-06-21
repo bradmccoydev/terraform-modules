@@ -1,15 +1,4 @@
-output "id" {
-  description = "Resource group Id"
-  value       = azurerm_resource_group.default.id
+output "alias" {
+  description = "Private Link Service Alias"
+  value       = azurerm_private_link_service.default.alias
 }
-
-output "name" {
-  description = "Resource group name"
-  value       = azurerm_resource_group.default.name
-}
-
-output "location" {
-  description = "Resource group location"
-  value       = azurerm_resource_group.default.location
-}
-
