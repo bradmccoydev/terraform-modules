@@ -3,6 +3,11 @@ variable "role_name" {
   description = "Friendly name of the role. If omitted, Terraform will assign a random, unique name."
 }
 
+variable "policy_arns" {
+  type        = list(string)
+  description = "Policy ARN's if you want to attach policies"
+}
+
 variable "assume_policy_role_object" {
   type = object({
     Version = string
