@@ -9,4 +9,6 @@ resource "azurerm_private_endpoint" "default" {
     private_connection_resource_id = var.private_connection_resource_id
     is_manual_connection           = false
   }
+
+  tags = var.tags
 }
