@@ -4,6 +4,7 @@ resource "aws_eks_node_group" "default" {
   node_role_arn   = var.node_role_arn
   subnet_ids      = var.subnet_ids
   disk_size       = var.disk_size
+  capacity_type   = var.capacity_type
   instance_types  = var.kubernetes_node_size
 
   scaling_config {

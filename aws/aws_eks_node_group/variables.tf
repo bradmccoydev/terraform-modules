@@ -44,6 +44,12 @@ variable "disk_size" {
   description = "Disk size in GiB for worker nodes. Defaults to 20."
 }
 
+variable "capacity_type" {
+  type        = string
+  description = "Whether to use spot or not."
+  default = "SPOT"
+}
+
 variable "kubernetes_node_size" {
   type        = list(string)
   description = "List of instance types associated with the EKS Node Group. Defaults to ['t3.medium']."
