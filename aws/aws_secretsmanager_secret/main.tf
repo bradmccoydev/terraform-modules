@@ -13,5 +13,5 @@ resource "aws_secretsmanager_secret" "default" {
 
 resource "aws_secretsmanager_secret_version" "default" {
   secret_id     = aws_secretsmanager_secret.default.id
-  secret_string = var.tags
+  secret_string = var.secret_string
 }
