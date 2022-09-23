@@ -14,6 +14,11 @@ variable "db_username" {
   description = "db_username"
 }
 
+variable "db_port" {
+  description = "db_username"
+  type        = number
+}
+
 variable "db_instance_class" {
   description = "DB Instance Class"
 }

@@ -18,3 +18,9 @@ variable "subnet_ids" {
   type        = list(any)
   description = "List of subnet IDs. Must be in at least two different availability zones."
 }
+
+variable "endpoint_public_access" {
+  type        = bool
+  description = "API Server Public Access"
+  default     = false
+}
