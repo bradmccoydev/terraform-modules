@@ -33,9 +33,9 @@ variable "scaling_config" {
   description = "Configuration block with scaling settings."
 
   default = {
-    desired_size = 1
-    max_size     = 1
-    min_size     = 1
+    desired_size = 2
+    max_size     = 3
+    min_size     = 2
   }
 }
 
@@ -47,7 +47,7 @@ variable "disk_size" {
 variable "capacity_type" {
   type        = string
   description = "Whether to use spot or not."
-  default = "SPOT"
+  default     = "SPOT"
 }
 
 variable "kubernetes_node_size" {
