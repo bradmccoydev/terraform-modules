@@ -33,9 +33,9 @@ variable "scaling_config" {
   description = "Configuration block with scaling settings."
 
   default = {
-    desired_size = 2
-    max_size     = 3
-    min_size     = 2
+    desired_size = 3
+    max_size     = 4
+    min_size     = 3
   }
 }
 
