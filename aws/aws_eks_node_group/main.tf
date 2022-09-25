@@ -6,6 +6,7 @@ resource "aws_eks_node_group" "default" {
   disk_size       = var.disk_size
   capacity_type   = var.capacity_type
   instance_types  = var.kubernetes_node_size
+  ami_type        = var.ami_type
 
   scaling_config {
     desired_size = var.scaling_config.desired_size

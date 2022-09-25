@@ -50,6 +50,12 @@ variable "capacity_type" {
   default     = "SPOT"
 }
 
+variable "ami_type" {
+  type        = string
+  description = "Whether to use ARM Architechure"
+  default     = null
+}
+
 variable "kubernetes_node_size" {
   type        = list(string)
   description = "List of instance types associated with the EKS Node Group. Defaults to ['t3.medium']."
