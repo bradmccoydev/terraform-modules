@@ -16,7 +16,3 @@ variable "resource_group_name" {
 variable "address_prefixes" {
   description = "Address Prefixes."
 }
-
-variable "enforce_private_link_endpoint_network_policies" {
-  description = "Enforce Private Link endpoint Network Policies."
-}

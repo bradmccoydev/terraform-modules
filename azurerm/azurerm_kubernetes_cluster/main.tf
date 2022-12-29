@@ -14,8 +14,8 @@ resource "azurerm_kubernetes_cluster" "default" {
     vnet_subnet_id      = var.kubernetes_subnet_id
     enable_auto_scaling = true
     min_count           = 1
-    max_count           = 10
-    max_pods            = 200
+    max_count           = 5
+    max_pods            = 250
   }
 
   identity {
