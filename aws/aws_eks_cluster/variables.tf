@@ -24,3 +24,9 @@ variable "endpoint_public_access" {
   description = "API Server Public Access"
   default     = false
 }
+
+variable "endpoint_private_access" {
+  type        = bool
+  description = "API Server Public Access"
+  default     = false
+}
